@@ -1,0 +1,12 @@
+{
+    "name": "discord-bot",
+    "version": "0.0.1",
+    "description": "Test Discord bot",
+    "main": "bot.js",
+    "author": "Keith Craley <Kcral21@gmail.com>",
+    "dependencies": {
+        "discord.io": "^2.5.3",
+        "eslint": "^4.15.0",
+        "winston": "^2.4.0"
+    }
+}
