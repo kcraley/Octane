@@ -3,5 +3,6 @@
 # ENV Variables
 
 # Include simple key/value pairs that are used in bin/scripts and Make
-DOCKER_REG=
-SERVICE_NAME=
+DOCKER='docker'
+DOCKER_REG=''
+SERVICE_NAME='octane-nodejs-chatbot'
