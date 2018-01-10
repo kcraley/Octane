@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# ENV Variables
+
+# Include simple key/value pairs that are used in bin/scripts and Make
+DOCKER_REG=
+SERVICE_NAME=
