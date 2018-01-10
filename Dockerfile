@@ -7,7 +7,6 @@ WORKDIR /code
 COPY . /code
 
 RUN set -x \
-    && npm install \
-    && npm cache clean
+    && npm install
 
 ENTRYPOINT [ "/bin/entrypoint" ]
