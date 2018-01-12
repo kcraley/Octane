@@ -6,4 +6,4 @@ env
 
 echo @$
 
-node ./
+node ./src/bot.js
