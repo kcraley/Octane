@@ -8,9 +8,6 @@ end_of_line = lf
 insert_final_newline = true
 indent_style = space
 trim_trailing_whitespace = true
-
-# JSON configuration
-[*.{js,json,yml}]
 indent_size = 2
 
 # Makefile configuration

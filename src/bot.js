@@ -4,6 +4,8 @@ var logger = require('winston');
 var auth = require('./auth/auth.json');
 //var commands = require('./commands/*');
 
+import glob from 'glob';
+
 // Configure logger settings
 logger.remove(logger.transports.Console);
 logger.add(logger.transports.Console, {
