@@ -1,6 +1,9 @@
 # Auth file for Discord connectivity
 /src/auth/auth.json
 
+# SonarLint
+/.sonarlint
+
 # Logs
 logs
 *.log
