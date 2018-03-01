@@ -5,7 +5,8 @@
   "author": "Keith Craley <Kcral21@gmail.com>",
   "scripts": {
     "security-check": "nsp check",
-    "start": "babel-node ./"
+    "start": "babel-node ./",
+    "build": "babel ./src"
   },
   "dependencies": {
     "bluebird": "^3.5.1",
