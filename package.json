@@ -4,21 +4,20 @@
   "description": "A homegrown Discord chat bot for development and learing purposes",
   "author": "Keith Craley <Kcral21@gmail.com>",
   "scripts": {
+    "dev": "nodemon ./src/discordie.js --exec babel-node",
     "security-check": "nsp check",
     "start": "babel-node ./",
+    "start:discordie": "babel-node ./src/discordie.js",
+    "start:discord.io": "babel-node ./src/discordio.js",
     "build": "babel ./src"
   },
   "dependencies": {
-    "bluebird": "^3.5.1",
     "chalk": "^2.3.0",
     "discord.io": "github:woor/discord.io#gateway_v6",
     "discordie": "^0.11.0",
-    "express": "^4.16.2",
     "glob": "^7.1.2",
     "moment": "^2.20.1",
-    "prompt": "^1.0.0",
     "ramda": "^0.25.0",
-    "request": "^2.83.0",
     "winston": "^2.4.0"
   },
   "devDependencies": {

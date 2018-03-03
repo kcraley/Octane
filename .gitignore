@@ -1,5 +1,6 @@
 # Auth file for Discord connectivity
 /src/auth/auth.json
+/node_modules
 
 # SonarLint
 /.sonarlint

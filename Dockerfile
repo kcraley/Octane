@@ -8,7 +8,7 @@ COPY . /code
 
 RUN set -x \
     && apt-get update \
-    && apt-get install git -y \
+    && apt-get install -y git --no-install-recommends \
     && chmod +x ./bin/entrypoint \
     && npm install
 

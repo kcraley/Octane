@@ -6,4 +6,4 @@ env
 
 echo @$
 
-node ./src/bot.js
+npm run start

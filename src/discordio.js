@@ -12,30 +12,33 @@ let bot = new Discord.Client({
   token: auth.token,
   autorun: true
 });
+
 bot.on('ready', function (evt) {
+  logger.info(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${evt.d} ${evt.op} ${evt.s} ${evt.t}`)
   logger.info(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] Connected`);
   logger.info(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] Logged in as: ` + chalk.yellow(bot.username + ' - (' + bot.id + ')'));
 });
-bot.on('message', function (user, userID, channelID, message, evt) {
-    // Our bot needs to know if it will execute a command
-    // It will listen for messages that will start with `!`
-    if (message.substring(0, 1) == '!') {
-      let args = message.substring(1).split(' ');
-      let cmd = args[0];
 
-      args = args.splice(1);
-      switch(cmd) {
-          // !ping
-          case 'ping':
-            bot.sendMessage({
-              to: channelID,
-              message: 'Pong!'
-            });
-          break;
-          // Just add any case commands if you want to..
-        }
+bot.on('message', function (user, userID, channelID, message, evt) {
+  // Our bot needs to know if it will execute a command
+  // It will listen for messages that will start with `Octane`
+  if (message.substring(0, message.indexOf(' ')) == 'Octane' || 'octane') {
+    let args = message.split(' ').splice(1);
+    let cmd = args[0];
+
+    switch(cmd) {
+      // !ping
+      case 'ping':
+        bot.sendMessage({
+          to: channelID,
+          message: 'Pong!'
+        });
+      break;
+      // Just add any case commands if you want to..
     }
+  }
 });
+
 bot.on('presence', function(user, userID, status, game, event) {
   switch(status){
     case 'online':
@@ -52,7 +55,13 @@ bot.on('presence', function(user, userID, status, game, event) {
       break;
   }
 });
+
 bot.on('disconnect', function (errMsg, code) {
   logger.info(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] The Discord client has disconnected`);
   logger.info(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] Received (` + errMsg + `) : (` + code `)`);
+});
+
+process.on('SIGTERM', function () {
+  logger.info('Starting graceful shutdown...')
+  bot.disconnect();
 });

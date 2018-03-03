@@ -15,5 +15,5 @@ if (process.env.NODE_ENV === 'prod') {
 } else {
   logger.info(chalk.cyan(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] Booting in development environment...`));
   require('babel-register');
-  require('./src/bot.js');
+  require('./src/discordie.js');
 }
