@@ -5,6 +5,9 @@
 # SonarLint
 /.sonarlint
 
+# VS Code
+/.vscode/
+
 # Logs
 logs
 *.log
@@ -60,7 +63,3 @@ typings/
 
 # Yarn Integrity file
 .yarn-integrity
-
-# dotenv environment variables file
-.env
-
