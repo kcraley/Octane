@@ -4,6 +4,7 @@
 
 # SonarLint
 /.sonarlint
+/.scannerwork
 
 # VS Code
 /.vscode/
