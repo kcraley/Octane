@@ -17,7 +17,6 @@ build: clean
 clean:
 	-$(DOCKER) rm -f $(DOCKER_REG)$(SERVICE_NAME)
 	-$(DOCKER) rm -f $(SERVICE_NAME)
-	-$(DOCKER) rmi -f $(DOCKER_REG)$(SERVICE_NAME)
 
 .PHONY: unittest
 unittest:
