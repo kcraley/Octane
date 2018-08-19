@@ -1,15 +1,15 @@
-FROM node:9.4.0-slim
+FROM node:8-alpine
 
 LABEL maintainer="Keith Craley <kcral21@gmail.com>"
 
-WORKDIR /code
+WORKDIR /app
 
-COPY . /code
+COPY . /app
 
 RUN set -x \
-    && apt-get update \
-    && apt-get install -y git --no-install-recommends \
-    && chmod +x ./bin/entrypoint \
+    && apk update \
+    && apk upgrade \
+    && apk add bash git \
     && npm install
 
-ENTRYPOINT [ "./bin/entrypoint" ]
+CMD [ "./" ]
