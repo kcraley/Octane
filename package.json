@@ -5,6 +5,7 @@
   "author": "Keith Craley <Kcral21@gmail.com>",
   "scripts": {
     "dev": "nodemon ./src/discordie.js --exec babel-node",
+    "lint": "eslint --output-file ./eslint.report --format json --ext js ./src/",
     "security-check": "nsp check",
     "start": "babel-node ./",
     "start:discordie": "babel-node ./src/discordie.js",
